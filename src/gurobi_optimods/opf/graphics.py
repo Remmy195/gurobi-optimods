@@ -14,8 +14,8 @@ from gurobi_optimods.opf import converters, grbgraphical
 
 def solution_plot(
     case,
-    coords=None,
     solution,
+    coords=None,
     width=1200,
     height=900,
     keep_obj=True
@@ -29,11 +29,11 @@ def solution_plot(
     ----------
     case : dict
         Dictionary holding case data
-    coords : dict | None
-        Optional {bus_i: (lat, lon)}. If None, will auto-generate.
     solution: dict
         Dictionary holding solution data following the MATPOWER notation as
         returned by the ``solve_opf`` function
+    coords : dict | None
+        Optional {bus_i: (lat, lon)}. If None, will auto-generate.
     width, height : int
         Figure size in pixels.
     keep_obj : bool
@@ -52,7 +52,7 @@ def solution_plot(
     alldata["graphical"] = {}
     alldata["graphical"]["numfeatures"] = 0
 
-    if coords = None:
+    if coords == None:
         coords = _get_coords(case, coords)
     
     # Map given coordinate data to network data

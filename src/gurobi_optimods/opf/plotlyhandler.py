@@ -171,9 +171,11 @@ class Plotlyhandler:
                 line_color=self.vertex_border_color,
                 colorbar=dict(
                     thickness=15,
-                    title=colorbar_title,
-                    xanchor="left",
-                    titleside="right",
+                    title=dict(
+                        text=colorbar_title,
+                        font=dict(size=14),
+                        side="right",
+                    )
                 ),
             ),
             text=self.vertex_text_list(),
@@ -264,8 +266,10 @@ class Plotlyhandler:
             autosize=False,
             height=400,
             width=450,
-            title="",
-            titlefont_size=16,
+            title=dict(
+                text="", 
+                font=dict(size=16)
+                ),
             showlegend=False,
             hovermode="closest",
             margin=dict(b=5, l=0, r=0, t=20),
