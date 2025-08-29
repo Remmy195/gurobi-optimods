@@ -6,17 +6,17 @@
 # gurobi-optimods: data-driven APIs for common optimization tasks
 Fork of gurobi optimods with improved OPF visualization. Added automatic network coordinate generation using Graphviz sfdp (you must have graphviz installed on Windows)
 
-'''
-from gurobi_optimods.opf import solution_plot_optimized
+```
+from gurobi_optimods.opf import solution_plot
 from gurobi_optimods import opf
 
 case = opf.read_case_matpower("data/case1354pegase.m")
 solution = opf.solve_opf(case, opftype="DC")
 
-fig = solution_plot_optimized(case, solution, coords=None)
+fig = solution_plot(case, solution, coords=None)
 fig.show()                       # interactive
 fig.write_html("opf_solution.html")  # save interactive version
-'''
+```
 
 ``gurobi-optimods`` is an open-source Python repository of implemented
 optimization use cases, each with clear, informative, and pretty documentation
