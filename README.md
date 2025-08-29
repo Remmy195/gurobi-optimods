@@ -4,6 +4,7 @@
 [![Docs](https://readthedocs.com/projects/gurobi-optimization-gurobi-optimods/badge/?version=stable)](https://gurobi-optimization-gurobi-optimods.readthedocs-hosted.com/en/stable)
 
 # gurobi-optimods: data-driven APIs for common optimization tasks
+Fork of Gurobi Optimods with improved OPF visualization — automatic Graphviz layouts and cleaner Plotly plots.
 
 ``gurobi-optimods`` is an open-source Python repository of implemented
 optimization use cases, each with clear, informative, and pretty documentation
