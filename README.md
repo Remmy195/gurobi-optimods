@@ -14,8 +14,7 @@ case = opf.read_case_matpower("data/case1354pegase.m")
 solution = opf.solve_opf(case, opftype="DC")
 
 fig = solution_plot(case, solution, coords=None)
-fig.show()                       # interactive
-fig.write_html("opf_solution.html")  # save interactive version
+fig.show()
 ```
 
 ``gurobi-optimods`` is an open-source Python repository of implemented
