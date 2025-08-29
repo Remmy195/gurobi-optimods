@@ -13,7 +13,7 @@ from gurobi_optimods import opf
 case = opf.read_case_matpower("data/case1354pegase.m")
 solution = opf.solve_opf(case, opftype="DC")
 
-fig = solution_plot(case, coords=None, solution)
+fig = solution_plot(case, solution, coords=None)
 fig.show()
 ```
 
