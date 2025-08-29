@@ -7,13 +7,12 @@
 Fork of gurobi optimods with improved OPF visualization. Added automatic network coordinate generation using Graphviz sfdp (you must have graphviz installed on Windows)
 
 ```
-from gurobi_optimods.opf import solution_plot
-from gurobi_optimods import opf
+from gurobi_optimods import opf, datasets
 
-case = opf.read_case_matpower("data/case1354pegase.m")
+case = datasets.load_opf_example("case1354pegase")
 solution = opf.solve_opf(case, opftype="DC")
 
-fig = solution_plot(case, solution, coords=None)
+fig = opf.solution_plot(case, solution, coords=None)
 fig.show()
 ```
 
