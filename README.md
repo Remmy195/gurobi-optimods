@@ -4,7 +4,7 @@
 [![Docs](https://readthedocs.com/projects/gurobi-optimization-gurobi-optimods/badge/?version=stable)](https://gurobi-optimization-gurobi-optimods.readthedocs-hosted.com/en/stable)
 
 # gurobi-optimods: data-driven APIs for common optimization tasks
-Fork of gurobi optimods with improved OPF visualization. Added automatic network coordinate generation using Graphviz sfdp (you must have graphviz installed on Windows)
+Fork of gurobi optimods with improved OPF visualization.
 
 ```
 from gurobi_optimods import opf, datasets
