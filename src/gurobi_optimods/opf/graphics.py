@@ -45,20 +45,18 @@ def solution_plot(
         displaged by calling ``figure.show()``.
     """
 
-    # Populate the alldata dictionary with case data
+
     alldata = converters.convert_case_to_internal_format(case)
 
-    # Special settings for graphics
     alldata["graphical"] = {}
     alldata["graphical"]["numfeatures"] = 0
 
     if coords == None:
         coords = _get_coords(case, coords)
     
-    # Map given coordinate data to network data
     converters.grbmap_coords_from_dict(alldata, coords)
 
-    # Generate a plotly figure object representing the given solution for the network
+    # Generate a plotly figure
     fig = grbgraphical.generate_solution_figure(alldata, solution)
 
     # copy the objective value
@@ -69,7 +67,6 @@ def solution_plot(
             break
     _restyle_annotations(fig, obj_text if keep_obj else None)
 
-    # optimize plot
     fig.update_layout(width=width, height=height,
                       margin=dict(l=20, r=20, t=20, b=20),
                       paper_bgcolor="white", plot_bgcolor="white")
